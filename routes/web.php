@@ -20,7 +20,7 @@ Route::get('/', function () {
 	return 'Minha primeira rota com laravel';
 });
 
-Route::get('/users', 'UserController@list');
+//Route::get('/users', 'UserController@list');
 /*
 Route::group(['middleware' => 'auth'], function () {
 Route::get('/route/selector', 'PagesController@selectRoute');

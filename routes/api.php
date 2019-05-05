@@ -15,7 +15,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 	return $request->user();
 });
 
-Route::get('/users', 'UserController@list');
+//Route::get('/users', 'UserController@list');
 /*Route::get('/', function () {
 return 'Minha primeira rota com laravel';
 });*/
