@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller {
 	public function index() {
-		return ['status' => true];
+		return \App\User::all();
 	}
 	//
 }
