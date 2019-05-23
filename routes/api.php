@@ -11,18 +11,16 @@
 |
  */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-	return $request->user();
-});
+//Route::middleware('auth:api')->get('/users', 'UserController@index');
 
 //Route::get('/users', 'UserController@list');
 /*Route::get('/', function () {
 return 'Minha primeira rota com laravel';
-});*/
+});
 
 Route::get('/ok', function () {
-	return ['status' => true];
-});
+return ['status' => true];
+});*/
 
 Route::namespace ('API')->name('api')->group(function () {
 	Route::get('/users', 'UserController@index')->name('users');

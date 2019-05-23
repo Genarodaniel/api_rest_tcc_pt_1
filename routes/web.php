@@ -21,17 +21,15 @@ Route::get('/', function () {
 });
 
 //Route::get('/users', 'UserController@list');
-/*
+
 Route::group(['middleware' => 'auth'], function () {
-Route::get('/route/selector', 'PagesController@selectRoute');
+	Route::get('/route/selector', 'PagesController@selectRoute');
 
-// Admin Only //
+	Route::group(['middleware' => 'isAdmin'], function () {
+		Route::get('/admin', 'AdminController@index');
+		Route::group(['namespace' => 'App\Http\Controllers'], function () {
+			Route::get('/users', 'UserController@list');
 
-Route::group(['middleware' => 'isAdmin'], function () {
-Route::get('/admin', 'AdminController@index');
-Route::group(['namespace' => 'App\Http\Controllers'], function () {
-Route::get('/users', 'UserController@list');
-
+		});
+	});
 });
-});
-});*/
